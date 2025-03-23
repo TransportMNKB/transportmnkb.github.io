@@ -1,12 +1,12 @@
 
-git clone https://github.com/transportmnkb/transportmnkb.github.io
+~	$ git clone https://github.com/transportmnkb/transportmnkb.github.io
 
-cd transportmnkb.github.io
+~	$ cd transportmnkb.github.io
 
-echo "Hello World" > index.html
+~	$ echo "Hello World" > index.html
 
-git add --all
+~	$ git add --all
 
-git commit -m "Initial commit"
+~	$ git commit -m "Initial commit"
 
-git push -u origin main
+~	 $git push -u origin main
