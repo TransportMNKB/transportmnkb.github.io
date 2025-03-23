@@ -1,11 +1,62 @@
-git clone https://github.com/transportmnkb/transportmnkb.github.io
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport MNKB - Transport et Balayage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-cd transportmnkb.github.io
+    <header>
+        <h1>Transport MNKB</h1>
+        <p>Transport en vrac & Balayage de rue commercial et municipal</p>
+    </header>
 
-echo "Hello World" > index.html
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Nos Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-git add --all
+    <section id="accueil">
+        <h2>Bienvenue chez Transport MNKB</h2>
+        <p>Nous sommes spécialisés dans le transport en vrac et le balayage de rue pour les municipalités et les entreprises.</p>
+    </section>
 
-git commit -m "Initial commit"
+    <section id="services">
+        <h2>Nos Services</h2>
+        <ul>
+            <li>Transport en vrac (sable, gravier, terre, débris)</li>
+            <li>Balayage de rue commercial et municipal</li>
+            <li>Location d’équipements spécialisés</li>
+        </ul>
+    </section>
 
-git push -u origin main
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+        <p>Email : contact@transportmnkb.com</p>
+        <p>Téléphone : (XXX) XXX-XXXX</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Transport MNKB - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
