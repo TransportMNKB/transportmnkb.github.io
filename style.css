@@ -1,11 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
+/* Réinitialisation de base */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* En-tête */
 header {
     background-color: #222;
     color: white;
@@ -13,19 +20,20 @@ header {
     position: relative;
 }
 
+/* Bannière */
 .banner {
     width: 100%;
-    height: auto;
-    max-height: 300px;
+    height: 250px;
     object-fit: cover;
 }
 
+/* Barre de navigation */
 nav ul {
     list-style: none;
-    padding: 0;
-    background-color: #444;
     display: flex;
     justify-content: center;
+    background-color: #444;
+    padding: 10px;
 }
 
 nav li {
@@ -36,42 +44,62 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Sections */
 section {
     padding: 40px;
     background-color: white;
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
+    max-width: 1000px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Galerie d'images */
 .gallery {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .gallery img {
-    width: 30%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 300px; /* Taille raisonnable pour éviter l'explosion des images */
+    height: auto;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Formulaire de contact */
 form {
     max-width: 400px;
     margin: auto;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 form input, form textarea {
-    margin-bottom: 10px;
     padding: 10px;
     width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
@@ -79,11 +107,40 @@ button {
     color: white;
     padding: 10px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+button:hover {
+    background-color: #555;
+}
+
+/* Pied de page */
 footer {
     background-color: #222;
     color: white;
     padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design (Mobile) */
+@media screen and (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        max-width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
 }
